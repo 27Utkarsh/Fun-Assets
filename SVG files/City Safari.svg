@@ -1,0 +1,290 @@
+<!--
+
+This is an asset made by Utkarsh Singh,
+If youre using it please give credit (cry emoji)
+or just mention my github username 27Utkarsh 
+you can use ts for free 
+-->
+
+<svg width="100%" height="100%" viewBox="0 0 210 90" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" style="background-color: #1a1a2e;">
+  <title>City Safari</title>
+  
+  <defs>
+    <!-- Wheel spoke pattern -->
+    <g id="wheel-spokes">
+      <!-- Lighter spokes for night contrast -->
+      <line x1="0" y1="-3.5" x2="0" y2="3.5" stroke="#888" stroke-width="0.4"/>
+      <line x1="-3.5" y1="0" x2="3.5" y2="0" stroke="#888" stroke-width="0.4"/>
+      <line x1="-2.5" y1="-2.5" x2="2.5" y2="2.5" stroke="#888" stroke-width="0.4"/>
+      <line x1="2.5" y1="-2.5" x2="-2.5" y2="2.5" stroke="#888" stroke-width="0.4"/>
+    </g>
+
+    <!-- Building Asset 1 -->
+    <g id="bldg-1">
+       <rect x="0" y="-30" width="15" height="30" fill="#2a2a40" />
+       <!-- Windows -->
+       <rect x="2" y="-25" width="2" height="2" fill="#aaaa00" opacity="0.8"/>
+       <rect x="6" y="-25" width="2" height="2" fill="#555500" opacity="0.8"/> <!-- Unlit -->
+       <rect x="10" y="-25" width="2" height="2" fill="#aaaa00" opacity="0.8"/>
+       
+       <rect x="2" y="-15" width="2" height="2" fill="#aaaa00" opacity="0.8"/>
+       <rect x="10" y="-15" width="2" height="2" fill="#aaaa00" opacity="0.8"/>
+       
+       <rect x="2" y="-5" width="2" height="2" fill="#aaaa00" opacity="0.8"/>
+       <rect x="6" y="-5" width="2" height="2" fill="#aaaa00" opacity="0.8"/>
+    </g>
+
+    <!-- Building Asset 2 (Tall) -->
+    <g id="bldg-2">
+       <rect x="0" y="-50" width="20" height="50" fill="#222238" />
+       <rect x="2" y="-45" width="16" height="40" fill="none" stroke="#0f0f20" stroke-width="1"/>
+       <line x1="10" y1="-45" x2="10" y2="-5" stroke="#0f0f20" stroke-width="1"/>
+    </g>
+
+    <!-- Building Asset 3 (Short) -->
+    <g id="bldg-3">
+       <rect x="0" y="-20" width="25" height="20" fill="#303050" />
+       <rect x="2" y="-15" width="21" height="3" fill="#111" />
+       <rect x="2" y="-8" width="21" height="3" fill="#111" />
+    </g>
+    
+    <!-- Street Light -->
+    <g id="street-light">
+        <rect x="0" y="-25" width="1" height="25" fill="#555" />
+        <path d="M 0,-25 L 5,-25" stroke="#555" stroke-width="1" fill="none" />
+        <circle cx="5" cy="-25" r="1.5" fill="#ffaa00" opacity="0.8" />
+        <!-- Light glow -->
+        <circle cx="5" cy="-25" r="6" fill="url(#glowGradient)" opacity="0.3" />
+    </g>
+    
+    <radialGradient id="glowGradient">
+      <stop offset="0%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+
+  </defs>
+  
+  <style>
+    /* --- COLORS (City Night Mode) --- */
+    .road-color { fill: #1a1a1a; stroke: #333; stroke-width: 0.5; }
+    .lane-marker { stroke: #dddddd; stroke-width: 1; stroke-dasharray: 10, 15; }
+    .bg-accent { fill: #33334d; } /* Clouds */
+    .truck-dark { fill: #111111; } 
+    .truck-body-color { fill: #444444; } 
+    .truck-color { fill: #444444; } 
+    .window-color { fill: #1a1a2e; opacity: 0.9; } 
+    .star-color { fill: #ffffff; }
+    .moon-color { fill: #fdfd96; }
+    
+    /* --- ANIMATIONS --- */
+    @keyframes scroll-fast {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-210px); }
+    }
+    
+    @keyframes scroll-skyline {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-210px); }
+    }
+    
+    @keyframes scroll-cloud {
+      0% { transform: translateX(220px); }
+      100% { transform: translateX(-100px); }
+    }
+    @keyframes scroll-stars {
+       0% { transform: translateX(0); }
+       100% { transform: translateX(-50px); }
+    }
+    
+    /* Smoother bounce for highway */
+    @keyframes truck-bounce {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-0.2px) rotate(0deg); } 
+    }
+    
+    @keyframes wheel-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    
+    .road-group {
+      animation: scroll-fast 1s linear infinite; /* Fast road movement */
+    }
+    
+    .skyline-anim {
+      animation: scroll-skyline 10s linear infinite; /* Slower background */
+    }
+    
+    .cloud-1 { animation: scroll-cloud 15s linear infinite; }
+    .cloud-2 { animation: scroll-cloud 20s linear infinite; animation-delay: -8s; }
+    .stars-group { animation: scroll-stars 60s linear infinite; } 
+    
+    .truck-chassis { animation: truck-bounce 0.8s ease-in-out infinite; transform-origin: 18px 10px; }
+    
+    .wheel-rotation { 
+      animation: wheel-spin 0.2s linear infinite; /* Faster spin */
+    }
+    
+  </style>
+
+  <!-- Stars -->
+  <g class="star-color stars-group">
+      <rect x="10" y="10" width="1" height="1" />
+      <rect x="50" y="25" width="1" height="1" />
+      <rect x="90" y="15" width="2" height="2" />
+      <rect x="140" y="30" width="1" height="1" />
+      <rect x="190" y="10" width="1" height="1" />
+      <rect x="30" y="40" width="1" height="1" />
+      <rect x="100" y="5" width="1" height="1" />
+      <rect x="160" y="20" width="2" height="2" />
+      <rect x="230" y="10" width="1" height="1" />
+      <rect x="270" y="30" width="1" height="1" />
+  </g>
+
+  <!-- Moon -->
+  <g transform="translate(180, 20)">
+     <circle cx="0" cy="0" r="8" class="moon-color" />
+     <circle cx="-3" cy="-2" r="6" fill="#1a1a2e" /> 
+  </g>
+  
+  <!-- Atmosphere -->
+  <g class="bg-accent">
+      <g class="cloud-1" transform="translate(0, 15)">
+          <ellipse cx="20" cy="8" rx="15" ry="4" />
+          <ellipse cx="35" cy="10" rx="10" ry="3" />
+      </g>
+      <g class="cloud-2" transform="translate(0, 35)">
+          <ellipse cx="15" cy="6" rx="12" ry="3" />
+          <ellipse cx="25" cy="8" rx="8" ry="2" />
+      </g>
+  </g>
+
+  <!-- Skyline Layer (Parallax) -->
+  <g transform="translate(0, 80)"> <!-- Ground line is at ~80 -->
+     <g class="skyline-anim">
+        <g id="skyline-chunk">
+           <use href="#bldg-2" x="10" />
+           <use href="#bldg-1" x="40" />
+           <use href="#bldg-3" x="65" />
+           <use href="#bldg-2" x="100" />
+           <use href="#bldg-1" x="130" />
+           <use href="#bldg-3" x="160" />
+           <use href="#bldg-2" x="190" />
+        </g>
+        <!-- Repeat chunk for seamless loop -->
+        <use href="#skyline-chunk" x="210" />
+     </g>
+  </g>
+  
+  <!-- Road Surface -->
+  <rect x="0" y="80" width="100%" height="10" class="road-color" />
+  
+  <!-- Scrolls with road -->
+  <!-- Scrolls with road -->
+  <g transform="translate(0, 80)">
+    <g class="road-group">
+       <g id="road-chunk">
+          <!-- Lane Markers -->
+          <line x1="0" y1="5" x2="210" y2="5" class="lane-marker" />
+          <!-- Street Lights (Foreground/Side of road) -->
+          <!-- Placed slightly back to not block car view fully -->
+          <g transform="translate(20, 0) scale(0.6)"><use href="#street-light" /></g>
+          <g transform="translate(120, 0) scale(0.6)"><use href="#street-light" /></g>
+       </g>
+       <use href="#road-chunk" x="210" />
+    </g>
+  </g>
+  
+  <!-- Monster Truck Group -->
+  <g id="monster-truck" transform="translate(60, 54)">
+    
+    <!-- Wheels (BIGGER: r=6.5) -->
+    <g class="truck-color">
+      <!-- Back Wheel -->
+      <g transform="translate(8, 18)">
+        <circle cx="0" cy="0" r="6.5" />
+        <circle cx="0" cy="0" r="4.5" fill="#333"/>
+        <circle cx="0" cy="0" r="2.5" fill="#444"/> <!-- Darker rim -->
+        <circle cx="0" cy="0" r="1.2" fill="#000"/>
+        
+        <g class="wheel-rotation">
+          <use href="#wheel-spokes"/>
+          <circle cx="0" cy="0" r="6.5" fill="none" stroke="#222" stroke-width="0.8" stroke-dasharray="1.2,1.2"/>
+        </g>
+      </g>
+      
+      <!-- Front Wheel -->
+      <g transform="translate(35, 18)">
+        <circle cx="0" cy="0" r="6.5" />
+        <circle cx="0" cy="0" r="4.5" fill="#333"/>
+        <circle cx="0" cy="0" r="2.5" fill="#444"/> <!-- Darker rim -->
+        <circle cx="0" cy="0" r="1.2" fill="#000"/>
+        
+        <g class="wheel-rotation">
+          <use href="#wheel-spokes"/>
+          <circle cx="0" cy="0" r="6.5" fill="none" stroke="#222" stroke-width="0.8" stroke-dasharray="1.2,1.2"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Truck Body (Bouncing) -->
+    <g class="truck-chassis">
+      
+      <!-- Body Path with LARGER WHEEL WELLS -->
+      <path class="truck-body-color" fill-rule="evenodd" d="
+        M -5,18          
+        L -5,5           
+        L -2,2           
+        L 10,2           
+        L 10,6 L 15,6    
+        L 15,0           
+        L 30,0           
+        L 35,4           
+        L 45,4           
+        L 48,8           
+        L 48,16          
+        L 45,18          
+        L 44,18
+        A 10,10 0 0,0 26,18  
+        L 17,18            
+        A 10,10 0 0,0 -1,18  
+        L -5,18            
+        Z
+      " />
+      
+      <!-- Wheel Well trim -->
+      <path fill="none" stroke="#222" stroke-width="1" d="M 44,18 A 10,10 0 0,0 26,18" />
+      <path fill="none" stroke="#222" stroke-width="1" d="M 17,18 A 10,10 0 0,0 -1,18" />
+
+      <!-- Cabin Window -->
+      <path class="window-color" d="M 17,2 L 29,2 L 29,7 L 17,7 Z" />
+      
+      <!-- Side Detail -->
+      <rect x="18" y="8" width="10" height="1" fill="#222" opacity="0.5" />
+      
+      <!-- Roll Bar -->
+      <path fill="none" stroke="#222" stroke-width="2" d="M 12,6 L 12,1 L 6,1" />
+      
+      <!-- Headlight -->
+      <rect x="46" y="9" width="2" height="2" fill="#eee" />
+      <!-- Headlight Beam -->
+      <path d="M 48,10 L 100,0 L 100,20 Z" fill="url(#headlightGradient)" opacity="0.3" />
+
+      <rect x="47" y="13" width="1" height="1" fill="orange" />
+      
+      <!-- Tail light -->
+      <rect x="-5" y="6" width="1" height="3" fill="#cc0000" />
+      
+    </g>
+     
+     <!-- Headlight Gradient Def -->
+     <defs>
+        <linearGradient id="headlightGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#ffffcc" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#ffffcc" stop-opacity="0"/>
+        </linearGradient>
+     </defs>
+
+  </g>
+  
+</svg>

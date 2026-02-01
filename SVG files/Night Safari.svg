@@ -1,0 +1,262 @@
+<!--
+
+This is an asset made by Utkarsh Singh,
+If youre using it please give credit (cry emoji)
+or just mention my github username 27Utkarsh 
+you can use ts for free 
+-->
+
+<svg width="100%" height="100%" viewBox="0 0 210 90" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" style="background-color: #1a1a2e;">
+  <title>Night Safari</title>
+  
+  <defs>
+    <!-- Wheel spoke pattern -->
+    <g id="wheel-spokes">
+      <!-- Lighter spokes for night contrast -->
+      <line x1="0" y1="-3.5" x2="0" y2="3.5" stroke="#888" stroke-width="0.4"/>
+      <line x1="-3.5" y1="0" x2="3.5" y2="0" stroke="#888" stroke-width="0.4"/>
+      <line x1="-2.5" y1="-2.5" x2="2.5" y2="2.5" stroke="#888" stroke-width="0.4"/>
+      <line x1="2.5" y1="-2.5" x2="-2.5" y2="2.5" stroke="#888" stroke-width="0.4"/>
+    </g>
+
+    <!-- Cactus Asset -->
+    <g id="cactus-1">
+       <rect x="-1" y="-10" width="2" height="10" rx="1" fill="#aaaaaa" />
+       <rect x="-3" y="-7" width="2" height="1" rx="0.5" fill="#aaaaaa" />
+       <rect x="-3" y="-7" width="1" height="3" rx="0.5" fill="#aaaaaa" transform="translate(0, -2)" />
+       <rect x="1" y="-6" width="2" height="1" rx="0.5" fill="#aaaaaa" />
+       <rect x="2" y="-6" width="1" height="2" rx="0.5" fill="#aaaaaa" transform="translate(0, -1)" />
+    </g>
+    <!-- Bush Asset -->
+    <g id="bush-1">
+        <circle cx="0" cy="0" r="2" fill="#aaaaaa" />
+        <circle cx="-1.5" cy="1" r="1.5" fill="#aaaaaa" />
+        <circle cx="1.5" cy="1" r="1.5" fill="#aaaaaa" />
+        <circle cx="0" cy="-1.5" r="1.5" fill="#aaaaaa" />
+    </g>
+  </defs>
+  
+  <style>
+    /* --- COLORS (Night Mode) --- */
+    .fg-color { fill: #aaaaaa; } /* Light Grey for foreground/ground */
+    .bg-accent { fill: #33334d; } /* Dark Grey Blue for Clouds */
+    .truck-dark { fill: #111111; } /* Darker truck components */
+    .truck-body-color { fill: #444444; } /* Dark grey body */
+    .truck-color { fill: #444444; } 
+    .dust-color { fill: #555555; }
+    .window-color { fill: #1a1a2e; opacity: 0.9; } /* Match BG, like dark tint */
+    .star-color { fill: #ffffff; }
+    .moon-color { fill: #fdfd96; }
+    
+    /* --- ANIMATIONS --- */
+    @keyframes scroll-ground {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-210px); }
+    }
+    @keyframes scroll-cloud {
+      0% { transform: translateX(220px); }
+      100% { transform: translateX(-100px); }
+    }
+    @keyframes scroll-stars {
+       0% { transform: translateX(0); }
+       100% { transform: translateX(-50px); }
+    }
+    @keyframes truck-bounce {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-0.5px) rotate(-0.5deg); }
+      50% { transform: translateY(-0.8px) rotate(0deg); }
+      75% { transform: translateY(-0.4px) rotate(0.5deg); }
+    }
+    @keyframes wheel-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    
+    @keyframes dust-drift {
+      0% { 
+        transform: translate(0px, 0px) scale(0.5); 
+        opacity: 0.8;
+      }
+      100% { 
+        transform: translate(-20px, -15px) scale(2); 
+        opacity: 0;
+      }
+    }
+    
+    .terrain-group {
+      animation: scroll-ground 2.5s linear infinite;
+    }
+    .cloud-1 { animation: scroll-cloud 15s linear infinite; }
+    .cloud-2 { animation: scroll-cloud 20s linear infinite; animation-delay: -8s; }
+    .stars-group { animation: scroll-stars 60s linear infinite; } 
+    
+    .truck-chassis { animation: truck-bounce 0.4s ease-in-out infinite; transform-origin: 18px 10px; }
+    
+    .wheel-rotation { 
+      animation: wheel-spin 0.4s linear infinite;
+    }
+    
+    .dust-particle {
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+    }
+
+    .dust-1 { animation: dust-drift 1.2s ease-out infinite; }
+    .dust-2 { animation: dust-drift 1.4s ease-out infinite; animation-delay: 0.2s; }
+    .dust-3 { animation: dust-drift 1.6s ease-out infinite; animation-delay: 0.4s; }
+  </style>
+
+  <!-- Stars -->
+  <g class="star-color stars-group">
+      <rect x="10" y="10" width="1" height="1" />
+      <rect x="50" y="25" width="1" height="1" />
+      <rect x="90" y="15" width="2" height="2" />
+      <rect x="140" y="30" width="1" height="1" />
+      <rect x="190" y="10" width="1" height="1" />
+      <rect x="30" y="40" width="1" height="1" />
+      <rect x="100" y="5" width="1" height="1" />
+      <rect x="160" y="20" width="2" height="2" />
+      <rect x="230" y="10" width="1" height="1" />
+      <rect x="270" y="30" width="1" height="1" />
+  </g>
+
+  <!-- Moon -->
+  <g transform="translate(180, 20)">
+     <circle cx="0" cy="0" r="8" class="moon-color" />
+     <circle cx="-3" cy="-2" r="6" fill="#1a1a2e" /> <!-- Cutout for crescent -->
+  </g>
+  
+  <!-- Atmosphere -->
+  <g class="bg-accent">
+      <g class="cloud-1" transform="translate(0, 15)">
+          <ellipse cx="20" cy="8" rx="15" ry="4" />
+          <ellipse cx="35" cy="10" rx="10" ry="3" />
+      </g>
+      <g class="cloud-2" transform="translate(0, 35)">
+          <ellipse cx="15" cy="6" rx="12" ry="3" />
+          <ellipse cx="25" cy="8" rx="8" ry="2" />
+      </g>
+  </g>
+  
+  <!-- Ground Line -->
+  <rect x="0" y="80" width="100%" height="1" class="fg-color" />
+  
+  <!-- Scrolling Terrain with Veg -->
+  <g class="terrain-group">
+    <g id="ground-chunk">
+       <!-- Ground Surface -->
+       <g class="fg-color">
+         <polygon points="10,81 12,80 14,81" />
+         <polygon points="30,81 35,79 40,81" />
+         <polygon points="60,81 65,78 70,81" />
+         <polygon points="90,81 92,80 94,81" />
+         <polygon points="120,81 125,79 130,81" />
+         <polygon points="160,81 165,78 170,81" />
+         <rect x="190" y="81" width="5" height="1" />
+       </g>
+
+       <!-- Vegetation -->
+       <g transform="translate(50, 81) scale(0.8)"><use href="#cactus-1" /></g>
+       <g transform="translate(80, 81)"><use href="#bush-1" /></g>
+       <g transform="translate(140, 81) scale(1.2)"><use href="#cactus-1" /></g>
+       <g transform="translate(180, 81) scale(0.7)"><use href="#bush-1" /></g>
+       <g transform="translate(200, 81)"><use href="#cactus-1" /></g>
+    </g>
+    <use href="#ground-chunk" x="210" />
+  </g>
+  
+  <!-- Monster Truck Group -->
+  <g id="monster-truck" transform="translate(60, 54)">
+    
+    <!-- Dust Particles -->
+    <g class="dust-color" transform="translate(0, 2)">
+       <circle class="dust-particle dust-1" cx="8" cy="22" r="1.5" />
+       <circle class="dust-particle dust-2" cx="5" cy="23" r="1.2" />
+    </g>
+
+    <!-- Wheels (BIGGER: r=6.5) -->
+    <g class="truck-color">
+      <!-- Back Wheel -->
+      <g transform="translate(8, 18)">
+        <circle cx="0" cy="0" r="6.5" />
+        <circle cx="0" cy="0" r="4.5" fill="#333"/>
+        <circle cx="0" cy="0" r="2.5" fill="#444"/> <!-- Darker rim -->
+        <!-- Axle center -->
+        <circle cx="0" cy="0" r="1.2" fill="#000"/>
+        
+        <!-- Rotating Elements -->
+        <g class="wheel-rotation">
+          <use href="#wheel-spokes"/>
+          <!-- Tire tread -->
+          <circle cx="0" cy="0" r="6.5" fill="none" stroke="#222" stroke-width="0.8" stroke-dasharray="1.2,1.2"/>
+        </g>
+      </g>
+      
+      <!-- Front Wheel -->
+      <g transform="translate(35, 18)">
+        <circle cx="0" cy="0" r="6.5" />
+        <circle cx="0" cy="0" r="4.5" fill="#333"/>
+        <circle cx="0" cy="0" r="2.5" fill="#444"/> <!-- Darker rim -->
+        <!-- Axle center -->
+        <circle cx="0" cy="0" r="1.2" fill="#000"/>
+        
+        <!-- Rotating Elements -->
+        <g class="wheel-rotation">
+          <use href="#wheel-spokes"/>
+          <!-- Tire tread -->
+          <circle cx="0" cy="0" r="6.5" fill="none" stroke="#222" stroke-width="0.8" stroke-dasharray="1.2,1.2"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Truck Body (Bouncing) -->
+    <g class="truck-chassis">
+      
+      <!-- Body Path with LARGER WHEEL WELLS: COMMENTS REMOVED -->
+      <path class="truck-body-color" fill-rule="evenodd" d="
+        M -5,18          
+        L -5,5           
+        L -2,2           
+        L 10,2           
+        L 10,6 L 15,6    
+        L 15,0           
+        L 30,0           
+        L 35,4           
+        L 45,4           
+        L 48,8           
+        L 48,16          
+        L 45,18          
+        L 44,18
+        A 10,10 0 0,0 26,18  
+        L 17,18            
+        A 10,10 0 0,0 -1,18  
+        L -5,18            
+        Z
+      " />
+      
+      <!-- Wheel Well trim -->
+      <path fill="none" stroke="#222" stroke-width="1" d="M 44,18 A 10,10 0 0,0 26,18" />
+      <path fill="none" stroke="#222" stroke-width="1" d="M 17,18 A 10,10 0 0,0 -1,18" />
+
+      <!-- Cabin Window -->
+      <path class="window-color" d="M 17,2 L 29,2 L 29,7 L 17,7 Z" />
+      
+      <!-- Side Detail -->
+      <rect x="18" y="8" width="10" height="1" fill="#222" opacity="0.5" />
+      
+      <!-- Roll Bar -->
+      <path fill="none" stroke="#222" stroke-width="2" d="M 12,6 L 12,1 L 6,1" />
+      
+      <!-- Headlight -->
+      <rect x="46" y="9" width="2" height="2" fill="#eee" />
+      <rect x="47" y="13" width="1" height="1" fill="orange" />
+      
+      <!-- Tail light -->
+      <rect x="-5" y="6" width="1" height="3" fill="#cc0000" />
+      
+    </g>
+
+  </g>
+  
+</svg>

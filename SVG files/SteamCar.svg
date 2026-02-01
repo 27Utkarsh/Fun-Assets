@@ -1,0 +1,253 @@
+<!--
+
+This is an asset made by Utkarsh Singh,
+If youre using it please give credit (cry emoji)
+or just mention my github username 27Utkarsh 
+you can use ts for free 
+-->
+
+<svg viewBox="0 0 2100 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Smoke gradient -->
+    <radialGradient id="smokeGradient1">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#ff8800;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#ffaa00;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="smokeGradient2">
+      <stop offset="0%" style="stop-color:#ff8800;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#ffaa00;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffdd00;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="smokeGradient3">
+      <stop offset="0%" style="stop-color:#ffaa00;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#ff6600;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ff4444;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="2100" height="900" fill="#f7f7f7"/>
+  
+  <!-- Ground with uneven terrain -->
+  <path d="M 0 650 Q 100 645, 200 652 Q 300 648, 400 653 Q 500 649, 600 651 Q 700 647, 800 654 Q 900 650, 1000 648 Q 1100 652, 1200 649 Q 1300 653, 1400 647 Q 1500 651, 1600 649 Q 1700 654, 1800 648 Q 1900 650, 2000 652 Q 2100 649, 2200 651 Q 2300 648, 2400 650 L 2400 900 L 0 900 Z" fill="#535353"/>
+  
+  <!-- Ground line -->
+  <path d="M 0 650 Q 100 645, 200 652 Q 300 648, 400 653 Q 500 649, 600 651 Q 700 647, 800 654 Q 900 650, 1000 648 Q 1100 652, 1200 649 Q 1300 653, 1400 647 Q 1500 651, 1600 649 Q 1700 654, 1800 648 Q 1900 650, 2000 652 Q 2100 649, 2200 651 Q 2300 648, 2400 650" stroke="#000" stroke-width="4" fill="none"/>
+  
+  <!-- Cacti in background with continuous movement -->
+  <g id="cactus1">
+    <rect x="-300" y="560" width="18" height="90" fill="#535353"/>
+    <rect x="-318" y="585" width="18" height="40" fill="#535353"/>
+    <rect x="-282" y="580" width="18" height="45" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus2">
+    <rect x="-800" y="600" width="12" height="50" fill="#535353"/>
+    <rect x="-788" y="615" width="12" height="20" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus3">
+    <rect x="-1400" y="555" width="20" height="95" fill="#535353"/>
+    <rect x="-1420" y="580" width="20" height="50" fill="#535353"/>
+    <rect x="-1380" y="585" width="20" height="40" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus4">
+    <rect x="-1900" y="590" width="14" height="60" fill="#535353"/>
+    <rect x="-1886" y="610" width="14" height="25" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus5">
+    <rect x="200" y="570" width="16" height="80" fill="#535353"/>
+    <rect x="184" y="595" width="16" height="35" fill="#535353"/>
+    <rect x="216" y="600" width="16" height="30" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus6">
+    <rect x="700" y="585" width="15" height="65" fill="#535353"/>
+    <rect x="715" y="605" width="15" height="28" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus7">
+    <rect x="1200" y="565" width="17" height="85" fill="#535353"/>
+    <rect x="1183" y="590" width="17" height="38" fill="#535353"/>
+    <rect x="1217" y="595" width="17" height="33" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cactus8">
+    <rect x="1650" y="595" width="13" height="55" fill="#535353"/>
+    <rect x="1663" y="612" width="13" height="22" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2400,0" dur="15s" repeatCount="indefinite"/>
+  </g>>
+  
+  <!-- Clouds with continuous movement -->
+  <g id="cloud1">
+    <ellipse cx="-400" cy="150" rx="60" ry="30" fill="#535353"/>
+    <ellipse cx="-350" cy="150" rx="50" ry="25" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2900,0" dur="30s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cloud2">
+    <ellipse cx="-1200" cy="200" rx="70" ry="35" fill="#535353"/>
+    <ellipse cx="-1140" cy="200" rx="55" ry="30" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2900,0" dur="30s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cloud3">
+    <ellipse cx="200" cy="120" rx="50" ry="25" fill="#535353"/>
+    <ellipse cx="245" cy="120" rx="45" ry="22" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2900,0" dur="30s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cloud4">
+    <ellipse cx="800" cy="180" rx="65" ry="32" fill="#535353"/>
+    <ellipse cx="850" cy="180" rx="52" ry="28" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2900,0" dur="30s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cloud5">
+    <ellipse cx="1400" cy="160" rx="58" ry="28" fill="#535353"/>
+    <ellipse cx="1448" cy="160" rx="48" ry="26" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2900,0" dur="30s" repeatCount="indefinite"/>
+  </g>
+  
+  <g id="cloud6">
+    <ellipse cx="1900" cy="140" rx="55" ry="27" fill="#535353"/>
+    <ellipse cx="1945" cy="140" rx="47" ry="24" fill="#535353"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 2900,0" dur="30s" repeatCount="indefinite"/>
+  </g>>
+  
+  <!-- Smoke puffs (animated) -->
+  <g id="smoke">
+    <circle cx="0" cy="0" r="25" fill="url(#smokeGradient1)">
+      <animate attributeName="cy" values="0; -80" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="25; 45" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g id="smoke2">
+    <circle cx="0" cy="0" r="20" fill="url(#smokeGradient2)">
+      <animate attributeName="cy" values="0; -90" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="r" values="20; 50" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="opacity" values="0.7; 0" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+  </g>
+  
+  <g id="smoke3">
+    <circle cx="0" cy="0" r="22" fill="url(#smokeGradient3)">
+      <animate attributeName="cy" values="0; -70" dur="1.6s" repeatCount="indefinite" begin="0.6s"/>
+      <animate attributeName="r" values="22; 40" dur="1.6s" repeatCount="indefinite" begin="0.6s"/>
+      <animate attributeName="opacity" values="0.6; 0" dur="1.6s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+  </g>
+  
+  <g id="smoke4">
+    <circle cx="0" cy="0" r="18" fill="url(#smokeGradient1)">
+      <animate attributeName="cy" values="0; -85" dur="2s" repeatCount="indefinite" begin="0.9s"/>
+      <animate attributeName="r" values="18; 48" dur="2s" repeatCount="indefinite" begin="0.9s"/>
+      <animate attributeName="opacity" values="0.7; 0" dur="2s" repeatCount="indefinite" begin="0.9s"/>
+    </circle>
+  </g>
+  
+  <g id="smoke5">
+    <circle cx="0" cy="0" r="24" fill="url(#smokeGradient2)">
+      <animate attributeName="cy" values="0; -75" dur="1.7s" repeatCount="indefinite" begin="1.2s"/>
+      <animate attributeName="r" values="24; 42" dur="1.7s" repeatCount="indefinite" begin="1.2s"/>
+      <animate attributeName="opacity" values="0.65; 0" dur="1.7s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+  </g>
+  
+  <!-- Steam Car -->
+  <g id="steamCar">
+    <!-- Wheels -->
+    <!-- Back Wheel -->
+    <g id="backWheel">
+      <circle cx="950" cy="630" r="35" fill="#535353" stroke="#000" stroke-width="3"/>
+      <circle cx="950" cy="630" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+      <line x1="950" y1="595" x2="950" y2="665" stroke="#000" stroke-width="2"/>
+      <line x1="915" y1="630" x2="985" y2="630" stroke="#000" stroke-width="2"/>
+      
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                        from="0 950 630" to="-360 950 630" dur="0.5s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Front Wheel -->
+    <g id="frontWheel">
+      <circle cx="1100" cy="630" r="35" fill="#535353" stroke="#000" stroke-width="3"/>
+      <circle cx="1100" cy="630" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+      <line x1="1100" y1="595" x2="1100" y2="665" stroke="#000" stroke-width="2"/>
+      <line x1="1065" y1="630" x2="1135" y2="630" stroke="#000" stroke-width="2"/>
+      
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+                        from="0 1100 630" to="-360 1100 630" dur="0.5s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Car body -->
+    <rect x="920" y="550" width="200" height="80" fill="#535353" stroke="#000" stroke-width="3"/>
+    
+    <!-- Cabin -->
+    <rect x="1000" y="500" width="100" height="50" fill="#535353" stroke="#000" stroke-width="3"/>
+    <rect x="1015" y="510" width="30" height="30" fill="#f7f7f7" stroke="#000" stroke-width="2"/>
+    
+    <!-- Boiler/Engine -->
+    <ellipse cx="960" cy="570" rx="30" ry="35" fill="#535353" stroke="#000" stroke-width="3"/>
+    
+    <!-- Chimney -->
+    <rect x="945" y="515" width="20" height="35" fill="#535353" stroke="#000" stroke-width="3"/>
+    <rect x="940" y="510" width="30" height="8" fill="#535353" stroke="#000" stroke-width="2"/>
+    
+    <!-- Position smoke at chimney -->
+    <use href="#smoke" x="955" y="510"/>
+    <use href="#smoke2" x="955" y="510"/>
+    <use href="#smoke3" x="955" y="510"/>
+    <use href="#smoke4" x="955" y="510"/>
+    <use href="#smoke5" x="955" y="510"/>
+    
+    <!-- Car bounce animation -->
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                      values="0,0; 0,-3; 0,0" dur="0.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Moving ground details -->
+  <g id="groundDetails">
+    <rect x="0" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="200" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="400" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="600" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="800" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="1000" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="1200" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="1400" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="1600" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="1800" y="655" width="40" height="3" fill="#3d3d3d"/>
+    <rect x="2000" y="655" width="40" height="3" fill="#3d3d3d"/>
+    
+    <animate attributeName="transform" attributeType="XML" type="translate"
+             from="0,0" to="200,0" dur="1s" repeatCount="indefinite"/>
+  </g>
+</svg>

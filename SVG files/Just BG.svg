@@ -1,0 +1,69 @@
+<!--
+
+This is an asset made by Utkarsh Singh,
+If youre using it please give credit (cry emoji)
+or just mention my github username 27Utkarsh 
+you can use ts for free 
+-->
+
+<svg width="100%" height="100%" viewBox="0 0 210 90" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" style="background-color: #f7f7f7;">
+  <title>Empty Scrolling Terrain</title>
+  
+  <style>
+    /* --- COLORS --- */
+    .fg-color { fill: #535353; } /* Ground/Cacti */
+    .bg-accent { fill: #d9d9d9; } /* Clouds */
+
+    /* --- ANIMATIONS --- */
+
+    /* 1. Ground Scrolling (Fast) */
+    @keyframes scroll-ground {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-210px); }
+    }
+
+    /* 2. Cloud Scrolling (Slow Parallax) */
+    @keyframes scroll-cloud {
+      0% { transform: translateX(220px); }
+      100% { transform: translateX(-100px); }
+    }
+
+    .terrain-group {
+      animation: scroll-ground 2s linear infinite;
+    }
+
+    .cloud-1 { animation: scroll-cloud 15s linear infinite; }
+    .cloud-2 { animation: scroll-cloud 20s linear infinite; animation-delay: -8s; }
+
+  </style>
+
+  <g class="bg-accent">
+      <g class="cloud-1" transform="translate(0, 20)">
+          <rect x="10" y="5" width="20" height="5" />
+          <rect x="5" y="8" width="30" height="5" />
+          <rect x="15" y="2" width="10" height="5" />
+      </g>
+      <g class="cloud-2" transform="translate(0, 40)">
+          <rect x="10" y="5" width="15" height="4" />
+          <rect x="5" y="8" width="25" height="4" />
+      </g>
+  </g>
+
+  <rect x="0" y="80" width="100%" height="1" class="fg-color" />
+
+  <g class="terrain-group fg-color">
+    <g id="ground-pattern">
+       <rect x="20" y="82" width="2" height="1" />
+       <rect x="45" y="83" width="1" height="1" />
+       <rect x="80" y="81" width="3" height="1" />
+       <rect x="120" y="82" width="1" height="1" />
+       <rect x="150" y="83" width="2" height="1" />
+       <rect x="190" y="81" width="1" height="1" />
+       <rect x="100" y="70" width="4" height="10" />
+       <rect x="98" y="74" width="2" height="4" />
+       <rect x="104" y="72" width="2" height="4" />
+    </g>
+    <use href="#ground-pattern" x="210" />
+  </g>
+
+</svg>

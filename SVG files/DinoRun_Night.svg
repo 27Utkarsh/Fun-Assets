@@ -1,0 +1,131 @@
+<!--
+
+This is an asset made by Utkarsh Singh,
+If youre using it please give credit (cry emoji)
+or just mention my github username 27Utkarsh 
+you can use ts for free 
+-->
+
+<svg width="100%" height="100%" viewBox="0 0 210 90" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" style="background-color: #1a1a2e;">
+  <title>Dino Run - Night Mode</title>
+  
+  <style>
+    /* --- COLORS --- */
+    .fg-color { fill: #aaaaaa; } /* Dino, Ground, Cacti - Light Grey due to dark BG */
+    .bg-accent { fill: #33334d; } /* Clouds - Darker Grey Blue */
+    .eye-color { fill: #1a1a2e; } /* Dino Eye - Match BG */
+    .star-color { fill: #ffffff; } /* Stars - White */
+    .moon-color { fill: #fdfd96; } /* Moon - Pale Yellow */
+
+    /* --- ANIMATIONS --- */
+
+    /* 1. Environment Scrolling */
+    @keyframes scroll-ground {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-210px); }
+    }
+    @keyframes scroll-cloud {
+      0% { transform: translateX(220px); }
+      100% { transform: translateX(-100px); }
+    }
+    @keyframes scroll-stars {
+       0% { transform: translateX(0); }
+       100% { transform: translateX(-50px); } /* Parallax effect: slower than clouds/ground */
+    }
+
+    /* 2. Dino Run Cycle (2-Frame Sprite Swap) 
+       Uses steps(1) for instant pixel-perfect switching
+    */
+    @keyframes run-frame-1 {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes run-frame-2 {
+      0%, 49% { opacity: 0; }
+      50%, 100% { opacity: 1; }
+    }
+
+    /* --- CLASS ASSIGNMENTS --- */
+    .terrain-group { animation: scroll-ground 2s linear infinite; }
+    .cloud-1 { animation: scroll-cloud 15s linear infinite; }
+    .cloud-2 { animation: scroll-cloud 20s linear infinite; animation-delay: -8s; }
+    
+    .stars-group { animation: scroll-stars 60s linear infinite; } 
+
+    /* Dino Animation Speeds */
+    .dino-pose-1 { animation: run-frame-1 0.2s steps(1) infinite; }
+    .dino-pose-2 { animation: run-frame-2 0.2s steps(1) infinite; }
+
+  </style>
+
+  <!-- Stars -->
+  <g class="star-color stars-group">
+      <rect x="10" y="10" width="1" height="1" />
+      <rect x="50" y="25" width="1" height="1" />
+      <rect x="90" y="15" width="2" height="2" />
+      <rect x="140" y="30" width="1" height="1" />
+      <rect x="190" y="10" width="1" height="1" />
+      <rect x="30" y="40" width="1" height="1" />
+      <rect x="100" y="5" width="1" height="1" />
+      <rect x="160" y="20" width="2" height="2" />
+      <rect x="230" y="10" width="1" height="1" /> <!-- Extra stars for scrolling continuity -->
+      <rect x="270" y="30" width="1" height="1" />
+  </g>
+
+  <!-- Moon (Fixed position in sky, maybe very slow move) -->
+  <g transform="translate(180, 20)">
+     <circle cx="0" cy="0" r="8" class="moon-color" />
+     <circle cx="-3" cy="-2" r="6" fill="#1a1a2e" /> <!-- Cutout for crescent effect -->
+  </g>
+
+  <g class="bg-accent">
+      <g class="cloud-1" transform="translate(0, 20)">
+          <rect x="10" y="5" width="20" height="5" />
+          <rect x="5" y="8" width="30" height="5" />
+          <rect x="15" y="2" width="10" height="5" />
+      </g>
+      <g class="cloud-2" transform="translate(0, 40)">
+          <rect x="10" y="5" width="15" height="4" />
+          <rect x="5" y="8" width="25" height="4" />
+      </g>
+  </g>
+
+  <rect x="0" y="80" width="100%" height="1" class="fg-color" />
+
+  <g class="terrain-group fg-color">
+    <g id="ground-pattern">
+       <rect x="20" y="82" width="2" height="1" />
+       <rect x="45" y="83" width="1" height="1" />
+       <rect x="80" y="81" width="3" height="1" />
+       <rect x="120" y="82" width="1" height="1" />
+       <rect x="150" y="83" width="2" height="1" />
+       <rect x="190" y="81" width="1" height="1" />
+       <rect x="100" y="70" width="4" height="10" />
+       <rect x="98" y="74" width="2" height="4" />
+       <rect x="104" y="72" width="2" height="4" />
+    </g>
+    <use href="#ground-pattern" x="210" />
+  </g>
+
+  <g class="fg-color" transform="translate(20, 52)">
+    
+    <path d="
+      M 16 0   h 12 v 10 h -8 v 2 h -2 v 10
+      h -10    v -4 h -2 v -4 h -2 v -4 
+      h 4      v 4  h 2  v 4  h 4  v -18 z
+    " />
+
+    <rect x="18" y="2" width="2" height="2" class="eye-color"/>
+    <rect x="18" y="14" width="4" height="2" /> <g class="dino-pose-1">
+        <polygon points="8,22 8,26 6,26 6,28 10,28 10,22" /> 
+        <polygon points="16,22 16,24 14,24 14,22" /> 
+    </g>
+
+    <g class="dino-pose-2">
+        <polygon points="8,22 8,24 6,24 6,22" /> 
+        <polygon points="16,22 16,26 18,26 18,28 14,28 14,22" /> 
+    </g>
+
+  </g>
+
+</svg>
